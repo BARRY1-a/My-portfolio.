@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROYAL CODE | Web Developer & Graphic Designer</title>
+<link rel="stylesheet" href="home.css">
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- NAVIGATION -->
+<header>
+    <nav class="navbar">
+        <div class="logo">ROYAL<span>CODE</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="welcome">WELCOME TO MY PORTFOLIO 👋</p>
+        <h1>
+            Hi, I'm <span>ROYAL</span>
+        </h1>
+        <h2>
+            I'm a <span class="typing">Web Developer</span>
+        </h2>
+        <p class="hero-text">
+            I create modern websites, creative graphics and digital
+            experiences that help brands stand out.
+        </p>
+        <div class="buttons">
+            <a href="#projects" class="btn primary">View My Work</a>
+            <a href="https://www.facebook.com/share/17uU8ub8ux/?mibextid=wwXIfr"
+               class="btn secondary">
+                Let's Chat
+            </a>
+        </div>
+    </div>
+    <!-- PROFILE IMAGE -->
+    <div class="hero-image">
+        <div class="image-glow"></div>
+        <img src="logo.jpeg" alt="Royal - Web Developer and Graphic Designer">
+    </div>
+</section>
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="section-title">
+        <p>GET TO KNOW ME</p>
+        <h2>About <span>Me</span></h2>
+    </div>
+    <div class="about-content">
+        <div class="about-card">
+            <h3>Web Developer 💻</h3>
+            <p>
+                I build clean, responsive and modern websites
+                designed to work beautifully across phones,
+                tablets and computers.
+            </p>
+        </div>
+        <div class="about-card">
+            <h3>Graphic Designer 🎨</h3>
+            <p>
+                I create eye-catching graphics, flyers,
+                logos and visual designs that communicate
+                ideas clearly.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+    <div class="section-title">
+        <p>WHAT I DO</p>
+        <h2>My <span>Skills</span></h2>
+    </div>
+    <div class="skills">
+        <div class="skill-card">
+            <div class="icon">💻</div>
+            <h3>HTML</h3>
+            <p>Building structured and semantic websites.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🎨</div>
+            <h3>CSS</h3>
+            <p>Creating beautiful responsive interfaces.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Adding interaction and dynamic features.</p>
+        </div>
+        <div class="skill-card">
+            <div class="icon">🖌️</div>
+            <h3>Graphic Design</h3>
+            <p>Designing flyers, logos and social media graphics.</p>
+        </div>
+    </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <div class="section-title">
+        <p>MY RECENT WORK</p>
+        <h2>Featured <span>Projects</span></h2>
+    </div>
+    <div class="projects">
+        <div class="project-card">
+            <div class="project-number">01</div>
+            <h3>Business Website</h3>
+            <p>
+                A modern responsive website designed for a business.
+            </p>
+            <a href="https://github.com/BARRY1-a/Pleazn">View Project →</a>
+        </div>
+        <div class="project-card">
+            <div class="project-number">02</div>
+            <h3>Graphic Design</h3>
+            <p>
+                Creative promotional graphics and branding materials.
+            </p>
+            <a href="https://www.instagram.com/reel/DQFgK7MjNaj/?stkn=cWJzdDVib2FodWg0">View Project →</a>
+        </div>
+        <div class="project-card">
+            <div class="project-number">03</div>
+            <h3>Portfolio Website</h3>
+            <p>
+                A personal portfolio showcasing creative and technical work.
+            </p>
+            <a href="#">View Project →</a>
+        </div>
+    </div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contact section">
+    <div class="section-title">
+        <p>LET'S WORK TOGETHER</p>
+        <h2>Get In <span>Touch</span></h2>
+    </div>
+    <p class="contact-text">
+        Have a project in mind? Let's create something amazing together.
+    </p>
+    <a href=".://www.facebook.com/share/17uU8ub8ux/?mibextid=wwXIfr"
+       class="btn primary">
+        Let's Chat 💬
+    </a>
+</section>
+<!-- FOOTER -->
+<footer>
+    <h3>ROYAL<span>CODE</span></h3>
+    <p>
+        Web Developer • Graphic Designer
+    </p>
+    <p class="copyright">
+        © 2026 Royal Code. All Rights Reserved.
+    </p>
+</footer>
+<!-- TYPING ANIMATION -->
+<script>
+    const words = [
+        "Web Developer",
+        "Graphic Designer",
+        "Creative Designer"
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const typing = document.querySelector(".typing");
+    function typeEffect() {
+        const word = words[wordIndex];
+        if (!deleting) {
+            typing.textContent = word.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === word.length) {
+                deleting = true;
+                setTimeout(typeEffect, 1500);
+                return;
+            }
+        } else {
+            typing.textContent = word.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                deleting = false;
+                wordIndex++;
+                if (wordIndex === words.length) {
+                    wordIndex = 0;
+                }
+            }
+        }
+        setTimeout(typeEffect, deleting ? 60 : 100);
+    }
+    typeEffect();
+</script>
+</body>
+</html>
+
+</body>
+</html>
